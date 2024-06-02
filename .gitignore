@@ -1,0 +1,15 @@
+/.env
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/.gitignore
+/.idea/documentation-rag-demo.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/data/default__vector_store.json
+/data/docstore.json
+/data/graph_store.json
+/data/image__vector_store.json
+/data/index_store.json
+/.idea/dataSources.xml
+/.idea/sqldialects.xml

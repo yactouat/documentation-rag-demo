@@ -1,0 +1,29 @@
+volumes:
+  documentation-rag-demo-pgadmin:
+  documentation-rag-demo-postgres:
+
+services:
+
+  pgadmin:
+    image: elestio/pgadmin:latest
+    ports:
+      - "8001:8001"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@postgres.com
+      PGADMIN_DEFAULT_PASSWORD: postgres
+      PGADMIN_LISTEN_PORT: 8001
+    volumes:
+        - documentation-rag-demo-pgadmin:/var/lib/pgadmin
+
+  postgres:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - documentation-rag-demo-postgres:/var/lib/postgresql/data

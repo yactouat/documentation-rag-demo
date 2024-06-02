@@ -1,0 +1,8 @@
+einops
+llama-index
+llama-index-embeddings-huggingface
+llama-index-vector-stores-postgres
+psycopg2-binary
+python-dotenv
+sqlalchemy
+streamlit
