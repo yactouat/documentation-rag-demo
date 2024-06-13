@@ -9,5 +9,6 @@
 
 ## how to pull models from `ollama`
 
+- install `ollama` by following the installation instructions for your OS @ https://ollama.com/
 - `ollama run deepseek-coder:1.3b` (or any other models listed in https://ollama.com/library)
 - update a model with `ollama pull deepseek-coder:1.3b`
