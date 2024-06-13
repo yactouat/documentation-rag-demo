@@ -5,8 +5,8 @@ import sys
 from rag import get_streamed_rag_query_engine
 
 # ! comment if you don't want to see everything that's happening under the hood
-# logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
-# logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
+logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
 # initialize chat history
 if "history" not in st.session_state:
