@@ -56,14 +56,14 @@ def get_streamed_rag_query_engine():
         embed_dim=768
     )
 
-    # if index does not exist create it
+    # if index does not exist (initialization) create it and uncomment the below code
     # storage_context = StorageContext.from_defaults(vector_store=vector_store)
     # documents = SimpleDirectoryReader(os.environ.get("KNOWLEDGE_BASE_DIR"), recursive=True).load_data()
     # index = VectorStoreIndex.from_documents(
     #     documents, storage_context=storage_context, show_progress=True
     # )
 
-    # if index already exists, load it
+    # ELSE index already exists, load it (if not exists comment the line below)
     index = VectorStoreIndex.from_vector_store(vector_store=vector_store)
 
     # configure retriever
